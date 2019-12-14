@@ -1,0 +1,11 @@
+<div class="alert alert-info" role="alert">
+  Tu tienes un descuento de {{ descuento }}
+</div>
+
+<div class="card text-center centrar">
+    <app-encabezado [titulo]='tarjeta.titulo' ></app-encabezado>
+    <app-cuerpo [cuerpo]="tarjeta.cuerpo" (onUrl)="abrirPagina($event)"></app-cuerpo>
+    <!--<app-pie [precio]="tarjeta.precio" (onDescuento)="descuento=$event"></app-pie> -->
+    <app-pie [precio]="tarjeta.precio" (onDescuento)="obtenerDescuento($event)"></app-pie>
+
+  </div>

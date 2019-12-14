@@ -1,0 +1,13 @@
+<div class="alert" [ngClass]="{
+    'alert-primary' : tipo == 'primary',
+    'alert-secondary' : tipo == 'secondary',
+    'alert-success' : tipo == 'success'}"
+    role="alert">
+    A simple primary alert—check it out!
+</div>
+
+<button type="button" class="btn btn-primary" (click)="tipo='primary'">Primary</button>
+<button type="button" class="btn btn-secondary" (click)="tipo='secondary'" >Secondary</button>
+<button type="button" class="btn btn-success" (click)="tipo='success'">Success</button>
+
+<label [ngStyle]="{'background-color': tipo =='success' ? 'yellow': 'green'}">Texto</label>
